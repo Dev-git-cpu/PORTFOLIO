@@ -43,8 +43,6 @@ const Navbar = () => {
           </li>
         </ul>
 
-        <button className='text-gray-300 hover:text-white'>🌙</button>
-
       </div>
     </nav>
   )
