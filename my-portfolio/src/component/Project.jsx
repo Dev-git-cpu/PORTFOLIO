@@ -14,11 +14,16 @@ const Project = () => {
        skills:["HTML","CSS","JAVASCRIPT","REACT","TAILWIND","JAVA","SPRINGBOOT","Spring Security","JPA","Hibernate","SQL"],
     },
     {
-       title:"Task-Manager",
-       description:"A productivity-focused task management application that helps users organize, track, and manage daily tasks effectively. Users can create tasks, update their status, and maintain productivity with a clean UI.",
-       skills:["HTML","CSS","JAVASCRIPT","REACT","TAILWIND","JAVA","SPRINGBOOT"],
+       title:"Wallet Payment Transfer Application ",
+       description:"A full-stack wallet-based payment transfer simulation built using Spring Boot, React, and MySQL, designed to demonstrate real-world fintech application flow, secure authentication, and transactional business logic.",
+       skills:["HTML","CSS","JAVASCRIPT","REACT","TAILWIND","JAVA","SPRINGBOOT","Spring Security","JPA","Hibernate","SQL"],
        
     },
+    {
+      title:"Library Management System",
+      description:"A full-stack application built to manage library operations such as book inventory, member management, and book issue/return tracking. The system provides role-based access, maintains transaction history, and ensures real-time book availability.",
+      skills:["HTML","CSS","JAVASCRIPT","REACT","TAILWIND","JAVA","SPRINGBOOT","Spring Security","JPA","Hibernate","SQL"]
+    }
 
   ]
   return (

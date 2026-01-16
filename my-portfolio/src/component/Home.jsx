@@ -1,7 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import Skills from './Skills'
-import resume from '../assets/DEV_SONONE_RESUME.pdf'
+import resume from '../assets/DEV_SONONE_CV.pdf'
 
 const Home = () => {
   const navigate = useNavigate()
