@@ -16,9 +16,9 @@ const Home = () => {
       <p className='mt-6 max-w-3xl text-xl text-center text-gray-400'>I create robust backend systems with Java and Spring Boot, paired with modern frontend technologies to deliver exceptional user experiences. Passionate about clean code, performance optimization, and solving complex problems.</p>
       <div className='flex flex-col md:flex-row gap-4 mt-6'>
       
-  <button onClick={()=>navigate("/project")} className='mt-6 inline-block bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 transition'>View Project</button>
+  <button onClick={()=>navigate("/project")} className='mt-6 inline-block bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 cursor-pointer transition'>View Project</button>
       
-  <button onClick={()=>window.open(resume,"_blank")} className="mt-6 bg-black text-white px-6 py-3 rounded hover:bg-blue-700 transition">Resume</button>
+  <button onClick={()=>window.open(resume,"_blank")} className="mt-6 bg-black text-white px-6 py-3 rounded hover:bg-blue-700 cursor-pointer transition">Resume</button>
   </div>
    </section>
    <Skills/>

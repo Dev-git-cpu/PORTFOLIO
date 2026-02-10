@@ -3,16 +3,17 @@ import React from 'react'
 const Skills = () => {
 
     const skillCategories =[
+      {
+    title: "Frontend",
+    description: "Client-side technologies and frameworks",
+    skills: ["HTML", "CSS", "Tailwind","JavaScript", "React"],
+  },
         {
             title: "Backend",
             description: "Server-side technologies and frameworks",
-            skills: ["Java", "Spring Boot", "Spring MVC", "Hibernate", "JPA"],
+            skills: ["Java", "Spring Boot", "Spring Security", "Hibernate", "JPA"],
         },
-        {
-    title: "Frontend",
-    description: "Client-side technologies and frameworks",
-    skills: ["JavaScript", "React", "HTML", "CSS", "Tailwind"],
-  },
+        
   {
     title: "Databse",
     description: "Client-side technologies and frameworks",
@@ -21,7 +22,7 @@ const Skills = () => {
   {
     title: "Tools",
     description: "Development and deployment tools",
-    skills: [ "IntelliJ IDEA", "Git", "GitHub"]
+    skills: ["IntelliJ IDEA", "Git", "GitHub","Postman"]
   }
     ]
   return (

@@ -9,12 +9,12 @@ const Project = () => {
        skills:["HTML","CSS","JAVASCRIPT","REACT","TAILWIND"],
     },
     {
-       title:"Student Management System",
-       description:"A full-stack web application designed to manage student records efficiently. The system allows administrators to add, update, view, and delete student information through a secure and user-friendly interface.",
+       title:"Employee Management System",
+       description:"A full-stack web application designed to manage employee records efficiently. The system allows administrators to add, update, view, and delete student information through a secure and user-friendly interface.",
        skills:["HTML","CSS","JAVASCRIPT","REACT","TAILWIND","JAVA","SPRINGBOOT","Spring Security","JPA","Hibernate","SQL"],
     },
     {
-       title:"Wallet Payment Transfer Application ",
+       title:"VaultPay - Payment Transfer Application ",
        description:"A full-stack wallet-based payment transfer simulation built using Spring Boot, React, and MySQL, designed to demonstrate real-world fintech application flow, secure authentication, and transactional business logic.",
        skills:["HTML","CSS","JAVASCRIPT","REACT","TAILWIND","JAVA","SPRINGBOOT","Spring Security","JPA","Hibernate","SQL"],
        

@@ -20,7 +20,7 @@ const Navbar = () => {
           </h1>
         </div>
 
-        <ul className='hidden md:flex gap-6 text-gray-300'>
+        <ul className='hidden md:flex gap-12 text-gray-300'>
           <li
             className='hover:text-blue-800 cursor-pointer'
             onClick={() => navigate("/")}
