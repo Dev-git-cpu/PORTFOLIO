@@ -1,29 +1,79 @@
-import React from 'react'
-import { useNavigate } from 'react-router-dom'
-import Skills from './Skills'
-import resume from "../assets/DEV_SONONE_CV.pdf";
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import Skills from "./Skills";
+import resume from "../assets/DEV_SONONE_RESUME.pdf";
+import Project from "./Project";
+import Contact from "./Contact";
 
 const Home = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+
   return (
-   <> <section className='grid place-items-center gap-y-6 max-w-6xl mx-auto px-4 py-44 '>
+    <>
+      {/* HERO SECTION */}
+      <section id="home" className="min-h-screen flex items-center justify-center bg-[#0f0f0f] text-white px-6 md:px-12 pt-28">
 
-    <h2 className='text-4xl md:text-5xl font-bold tracking-tight'>Hi, I'm <span className='text-blue-600'>Dev Sonone</span></h2>
+        <div className="max-w-6xl w-full text-center">
 
-     <p className='mt-6 max-w-xl text-2xl text-center text-gray-400'>
-       Full Stack Java Developer specializing in building scalable web applications and enterprise solutions
-      </p>
-      <p className='mt-6 max-w-3xl text-xl text-center text-gray-400'>I create robust backend systems with Java and Spring Boot, paired with modern frontend technologies to deliver exceptional user experiences. Passionate about clean code, performance optimization, and solving complex problems.</p>
-      <div className='flex flex-col md:flex-row gap-4 mt-6'>
-      
-  <button onClick={()=>navigate("/project")} className='mt-6 inline-block bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 cursor-pointer transition'>View Project</button>
-      
-  <button onClick={()=>window.open(resume,"_blank")} className="mt-6 bg-black text-white px-6 py-3 rounded hover:bg-blue-700 cursor-pointer transition">Resume</button>
-  </div>
-   </section>
-   <Skills/>
-   </>
-  )
-}
+          {/* Heading */}
+          <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+            Hi, I'm{" "}
+            <span className="text-emerald-400">
+              Dev Sonone
+            </span>
+          </h1>
 
-export default Home
+          {/* Subtitle */}
+          <p className="mt-6 text-lg md:text-xl text-gray-400 max-w-2xl mx-auto">
+            Full Stack Java Developer building scalable web apps & enterprise solutions
+          </p>
+
+          {/* Description */}
+          <p className="mt-4 text-gray-500 max-w-3xl mx-auto text-base md:text-lg">
+            I specialize in Java & Spring Boot for backend systems and modern frontend
+            technologies to create fast, clean, and user-friendly applications.
+          </p>
+
+          {/* Buttons */}
+          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+
+            {/* Primary Button */}
+            <button
+              onClick={() => navigate("/project")}
+              className="px-8 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-600 transition font-medium shadow-lg shadow-emerald-500/20"
+            >
+              View Projects
+            </button>
+
+            {/* Secondary Button */}
+            <button
+              onClick={() => window.open(resume, "_blank")}
+              className="px-8 py-3 rounded-xl border border-white/20 hover:border-emerald-400 hover:text-emerald-400 transition font-medium"
+            >
+             Resume
+            </button>
+
+          </div>
+
+        </div>
+      </section>
+
+      {/* OTHER SECTIONS */}
+      <div className="bg-[#0f0f0f] text-white">
+        <div id="skills">
+  <Skills />
+</div>
+
+<div id="projects">
+  <Project />
+</div>
+
+<div id="contact">
+  <Contact />
+</div>
+      </div>
+    </>
+  );
+};
+
+export default Home;

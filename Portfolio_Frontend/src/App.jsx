@@ -1,29 +1,41 @@
-// import './App.css'
-import {createBrowserRouter, RouterProvider } from 'react-router-dom'
+import './App.css'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+
 import Layout from './component/Layout'
 import Home from './component/Home'
 import Project from './component/Project'
 import Contact from './component/Contact'
+import Skills from './component/Skills'
 
 function App() {
+
   const router = createBrowserRouter([
     {
       path: "/",
-      element:<Layout/>,
-      children:[
-        {index:true, element: <Home/>},
-        {path:"/project",
-          element:<Project/>
+      element: <Layout />,
+      children: [
+        {
+          path: "/",
+          element: <Home />,
         },
-        {path:"/contact",
-          element:<Contact/>
-        }
-      ]
+        {
+          path: "/skills",
+          element: <Skills/>
+        },
+        {
+          path: "/project",
+          element: <Project />,
+        },
+        {
+          path: "/contact",
+          element: <Contact />,
+        },
+        
+      ],
     },
-    {}
   ])
 
-  return <RouterProvider router={router}/>
+  return <RouterProvider router={router} />
 }
 
 export default App

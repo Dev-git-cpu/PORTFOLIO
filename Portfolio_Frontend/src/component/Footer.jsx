@@ -1,24 +1,56 @@
-import React from 'react'
+import React from "react";
 import { FiGithub } from "react-icons/fi";
 import { SlSocialLinkedin } from "react-icons/sl";
 import { MdOutlineMailOutline } from "react-icons/md";
 
 const Footer = () => {
   return (
-<>
-<div className='grid place-items-center py-6 gap-4'>
-    <div className='py-4 flex gap-4'>
-        <a href="https://github.com/Dev-git-cpu" className='hover:text-blue-600'><FiGithub size={25}/></a>
-        <a href="https://www.linkedin.com/in/devsonone/" className='hover:text-blue-600'><SlSocialLinkedin size={25}/></a>
-        <a href="" className='hover:text-blue-600'><MdOutlineMailOutline size={25}/></a>
-        
+    <footer className="bg-[#0b0f0f] text-white border-t border-white/10 mt-10">
+
+      <div className="max-w-7xl mx-auto px-6 md:px-16 py-10 flex flex-col items-center gap-6">
+
+        {/* Social Icons */}
+        <div className="flex gap-6">
+
+          <a
+            href="https://github.com/Dev-git-cpu"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-3 rounded-full bg-white/5 border border-white/10 
+            hover:bg-emerald-500 hover:text-black transition"
+          >
+            <FiGithub size={20} />
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/devsonone/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-3 rounded-full bg-white/5 border border-white/10 
+            hover:bg-emerald-500 hover:text-black transition"
+          >
+            <SlSocialLinkedin size={18} />
+          </a>
+
+          <a
+            href="mailto:devsonone222@gmail.com"
+            className="p-3 rounded-full bg-white/5 border border-white/10 
+            hover:bg-emerald-500 hover:text-black transition"
+          >
+            <MdOutlineMailOutline size={20} />
+          </a>
+
         </div>
-    
-    <p className='text-center text-gray-500'>© 2026 Full Stack Developer. All rights reserved.</p>
-    </div>
 
-</>
-)
-}
+        {/* Text */}
+        <p className="text-gray-500 text-sm text-center">
+          © 2026 Dev Sonone. All rights reserved.
+        </p>
 
-export default Footer
+      </div>
+
+    </footer>
+  );
+};
+
+export default Footer;

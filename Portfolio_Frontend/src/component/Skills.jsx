@@ -1,73 +1,97 @@
-import React from 'react'
+import React from "react";
 
 const Skills = () => {
+  const skillCategories = [
+    {
+      title: "Frontend",
+      description: "Client-side technologies and frameworks",
+      skills: ["HTML", "CSS", "Tailwind", "JavaScript", "React"],
+    },
+    {
+      title: "Backend",
+      description: "Server-side technologies and frameworks",
+      skills: ["Java", "Spring Boot", "Spring Security", "Hibernate", "JPA"],
+    },
+    {
+      title: "Database",
+      description: "Database technologies & optimization",
+      skills: [
+        "MySQL",
+        "MongoDB",
+        "PostgreSQL",
+        "Oracle",
+        "SQL",
+        "Database Design",
+        "Query Optimization",
+      ],
+    },
+    {
+      title: "DevOps & Tools",
+      description: "Development and deployment tools",
+      skills: ["IntelliJ IDEA", "Postman", "Git", "GitHub","Docker","CI/CD (GitHub Actions)","Railway"],
+    },
+  ];
 
-    const skillCategories =[
-      {
-    title: "Frontend",
-    description: "Client-side technologies and frameworks",
-    skills: ["HTML", "CSS", "Tailwind","JavaScript", "React"],
-  },
-        {
-            title: "Backend",
-            description: "Server-side technologies and frameworks",
-            skills: ["Java", "Spring Boot", "Spring Security", "Hibernate", "JPA"],
-        },
-        
-  {
-    title: "Databse",
-    description: "Client-side technologies and frameworks",
-    skills: ["MySQL", "MongoDB", "PostgreSQL","Oracle","SQL","Database Design","Query Optimization"],
-  },
-  {
-    title: "Tools",
-    description: "Development and deployment tools",
-    skills: ["IntelliJ IDEA", "Git", "GitHub","Postman"]
-  }
-    ]
   return (
-<>
-<section className='max-w-6xl mx-auto px-4 py-10'>
-    <div className='grid place-items-center'>
-    <h1 className='text-4xl font-bold'>Technical <span className='text-blue-600'> Skills</span></h1>
-    <p className='mt-6'>A comprehensive toolkit for building modern, scalable applications</p>
-</div>
+    <section className="bg-[#0b0f0f] text-white px-6 md:px-16 py-20">
 
-<div className=' bg-gray-950 border border-gray-900 rounded-xl p-6' >
-<div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
-  {skillCategories.map((category, index) => (
-    <div
-      key={index}
-      className="bg-gray-950 border border-gray-900 rounded-xl p-6  hover:border-blue-800"
-    >
-      <h2 className="text-xl font-semibold">
-        {category.title}
-      </h2>
+      <div className="max-w-7xl mx-auto">
 
-      <p className="text-gray-400 mt-2">
-        {category.description}
-      </p>
+        {/* Heading */}
+        <div className="text-center mb-14">
+          <h1 className="text-3xl md:text-5xl font-bold">
+            Technical{" "}
+            <span className="text-emerald-400">Skills</span>
+          </h1>
 
-      <div className="flex flex-wrap gap-2 mt-4">
-        {category.skills.map((skill) => (
-          <span
-            key={skill}
-            className="px-3 py-1 text-sm rounded-full bg-gray-800 text-gray-300"
-          >
-            {skill}
-          </span>
-        ))}
+          <p className="mt-4 text-gray-400 max-w-xl mx-auto">
+            A comprehensive toolkit for building modern, scalable applications
+          </p>
+        </div>
+
+        {/* Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+          {skillCategories.map((category, index) => (
+            <div
+              key={index}
+              className="relative bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-md 
+              hover:border-emerald-400/40 transition duration-300 group"
+            >
+
+              {/* Glow Effect on Hover */}
+              <div className="absolute inset-0 rounded-2xl bg-emerald-500/0 group-hover:bg-emerald-500/5 transition"></div>
+
+              <h2 className="text-xl font-semibold relative z-10">
+                {category.title}
+              </h2>
+
+              <p className="text-gray-400 mt-2 relative z-10">
+                {category.description}
+              </p>
+
+              {/* Skills */}
+              <div className="flex flex-wrap gap-2 mt-5 relative z-10">
+                {category.skills.map((skill) => (
+                  <span
+                    key={skill}
+                    className="px-3 py-1 text-sm rounded-full 
+                    bg-white/10 border border-white/10 text-gray-300
+                    hover:bg-emerald-500/20 hover:text-emerald-300 transition"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+
+            </div>
+          ))}
+
+        </div>
+
       </div>
-    </div>
-  ))}
-</div>
+    </section>
+  );
+};
 
-</div>
-
-    
-
-</section>
-</>  )
-}
-
-export default Skills
+export default Skills;
